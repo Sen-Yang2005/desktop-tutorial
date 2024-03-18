@@ -27,9 +27,9 @@ main {
 }
 
 /* Styling for specific navigation links */
-nav a[href="Welcome Page.html"],
-nav a[href="Information Page.html"],
-nav a[href="Data Collection Page.html"] {
+nav a[href="home_page.html"],
+nav a[href="about_Page.html"],
+nav a[href="questionnaire.html"] {
     margin-left: 10px;
     margin-right: 10px;
     font-weight: bold; /* Set link text to bold */
