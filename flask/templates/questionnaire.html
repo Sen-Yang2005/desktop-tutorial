@@ -9,9 +9,9 @@
 <body>
     <!-- Navigation Bar -->
     <nav>
-        <a href="home_page.html">Welcome Page</a>
-        <a href="about_page.html">Information Page</a>
-        <a href="questionnaire.html">Data Collection Page</a>
+        <a href="/">Welcome Page</a>
+        <a href="/about">Information Page</a>
+        <a href="/questionnaire">Data Collection Page</a>
     </nav>
 
     <!-- Heading for the questionnaire -->
@@ -20,66 +20,65 @@
     </h1>
 
     <!-- Form for data collection with styling -->
-    <form class="container2" id="center3">
+    <form class="container2" id="center3" method="POST" action="/questionnaire">
+        <!-- Render the WTForms fields -->
+        {{ form.hidden_tag() }}
+        {{ form.csrf_token }}
+
         <!-- Labels and input fields for personal information -->
-        <label for="first name" class="size_of_font2">First Name:</label>
-        <input type="text" id="first name" name="first name" size="20" required>
+        <label for="first_name" class="size_of_font2">First Name:</label>
+        {{ form.first_name(size=20) }}
         <br>
         <br>
-        <label for="last name" class="size_of_font2">Last Name:</label>
-        <input type="text" id="last name" name="last name" size="21" required>
+        <label for="last_name" class="size_of_font2">Last Name:</label>
+        {{ form.last_name(size=21) }}
         <br>
         <br>
-        <label for="student number" class="size_of_font2">Student Number:</label>
-        <input type="text" id="student number" name="student number" size="30" required>
+        <label for="student_number" class="size_of_font2">Student Number:</label>
+        {{ form.student_number(size=30) }}
         <br>
         <br>
         <label for="email" class="size_of_font2">Email:</label>
-        <input type="email" id="email" name="email" size="35" required>
+        {{ form.email(size=35) }}
         <br>
         <br>
         <!-- Labels and input fields for grades in different subjects -->
         <label class="size_of_font2">Grades:</label> <br>
         <label class="size_of_font2">English for Academic Purposes:</label> <br>
-        <input type="text" size="8" required> <br>
+        {{ form.english_grades(size=8) }} <br>
 
         <label class="size_of_font2">Programming Theory:</label> <br>
-        <input type="text" size="8" required> <br>
+        {{ form.programming_theory_grades(size=8) }} <br>
 
         <label class="size_of_font2">Programming Practical Applications:</label> <br>
-        <input type="text" size="8" required> <br>
+        {{ form.programming_practical_grades(size=8) }} <br>
 
         <label class="size_of_font2">Extended Project:</label> <br>
-        <input type="text" size="8" required> <br>
+        {{ form.extended_project_grades(size=8) }} <br>
 
         <label class="size_of_font2">Intermediate Mathematics:</label> <br>
-        <input type="text" size="8" required>
+        {{ form.math_grades(size=8) }}
         <br>
         <br>
         <!-- Dropdown for overall satisfaction with the academic experience -->
         <label class="size_of_font2">Overall satisfaction with the academic experience:</label>
-        <select>
-            <option value="Very satisfied">Very satisfied</option>
-            <option value="Generally satisfied">Generally satisfied</option>
-            <option value="Relatively dissatisfied">Relatively dissatisfied</option>
-            <option value="Very dissatisfied">Very dissatisfied</option>
-        </select>
+        {{ form.satisfaction }}
         <br>
         <br>
         <!-- Textarea for feedback on points done well -->
         <label class="size_of_font2">Which points you think you have done well:</label>
         <br>
-        <textarea rows="5" cols="10" maxlength="256" required placeholder="Enter your text here"></textarea>
+        {{ form.feedback_points(rows=5, cols=10, maxlength=256) }}
         <br>
         <br>
         <!-- Textarea for suggestions for improvement -->
         <label class="size_of_font2">Suggestions for improvement:</label>
         <br>
-        <textarea rows="5" cols="10" maxlength="256" required placeholder="Enter your text here"></textarea>
+        {{ form.suggestions(rows=5, cols=10, maxlength=256) }}
         <br>
         <br>
         <!-- Submit button -->
-        <input type="button" value="Submit" id="button">
+        <input type="submit" value="Submit" id="button">
     </form>
 </body>
 </html>
