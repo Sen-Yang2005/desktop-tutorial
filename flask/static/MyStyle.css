@@ -1,0 +1,160 @@
+/* Flex layout for the entire body */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navigation bar styling */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: #333; /* Set navigation bar background color to dark gray */
+    margin-bottom: 10px;
+}
+
+/* Navigation link styling */
+nav a {
+    text-decoration: none;
+    color: #fff; /* Set link text color to white */
+    padding: 10px;
+}
+
+main {
+    text-align: center;
+    margin: 10px;
+}
+
+/* Styling for specific navigation links */
+nav a[href="Welcome Page.html"],
+nav a[href="Information Page.html"],
+nav a[href="Data Collection Page.html"] {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: bold; /* Set link text to bold */
+    border-radius: 5px; /* Set border radius for a rounded appearance */
+    padding: 10px 15px; /* Adjust padding for spacing */
+    transition: background-color 0.3s ease; /* Add transition effect for background color */
+}
+
+/* Hover effect for navigation links */
+nav a:hover {
+    background-color: #555; /* Set background color on hover */
+}
+
+/* Background image covering the entire body */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("IMG_5906.JPG") center/ cover no-repeat; /* Remove cover */
+    z-index: -1;
+}
+
+/* Styling for container1 */
+.container1 {
+    max-width: 900px;
+    margin: auto;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for unordered list items */
+ul li {
+    font-size: 35px;
+    color: #333;
+}
+
+/* Styling for container */
+#container {
+    max-height: calc(100vh - 100px); /* Set maximum height subtracting navigation bar height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Center alignment for heading 1 */
+#center1 {
+    text-align: center;
+}
+
+/* Center alignment for heading 2 */
+#center2 {
+    text-align: center;
+}
+
+/* Font size for size_of_font1 */
+.size_of_font1 {
+    font-size: 30px;
+}
+
+/* Font size for size_of_font2 */
+.size_of_font2 {
+    font-size: 20px;
+}
+
+/* Center alignment for heading 3 */
+#center3 {
+    text-align: center;
+}
+
+/* Styling for textarea */
+textarea {
+    width: 100%;
+    padding: 11px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Hover and focus effects for textarea */
+textarea:hover,
+textarea:focus {
+    border-color: #0077cc;
+    box-shadow: 0 0 5px rgba(0, 119, 204, 0.5);
+}
+
+/* Styling for container2 */
+.container2 {
+    max-height: calc(100vh - 100px); /* Set maximum height subtracting navigation bar height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-width: 900px;
+    margin: auto;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for button */
+#button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: lightblue;
+}
+
+/* Hover effect for button */
+#button:hover {
+    background-color: lightgray;
+}
+
+/* Focus effect for button */
+#button:focus {
+    box-shadow: 0 0 6px rgba(0, 120, 205, 0.6);
+}
